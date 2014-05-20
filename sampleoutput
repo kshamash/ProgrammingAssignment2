@@ -1,0 +1,25 @@
+> mat <- matrix(1:4, 2)
+> mat
+#     [,1] [,2]
+#[1,]    1    3
+#[2,]    2    4
+> cmat <- makeCacheMatrix(mat)
+> cacheSolve(cmat)
+#     [,1] [,2]
+#[1,]   -2  1.5
+#[2,]    1 -0.5
+> cacheSolve(cmat)
+#getting cached data
+#     [,1] [,2]
+#[1,]   -2  1.5
+#[2,]    1 -0.5
+> cmat$set(matrix(6:9, 2))
+> cacheSolve(cmat)
+#     [,1] [,2]
+#[1,] -4.5    4
+#[2,]  3.5   -3
+> cacheSolve(cmat)
+#getting cached data
+#     [,1] [,2]
+#[1,] -4.5    4
+#[2,]  3.5   -3
